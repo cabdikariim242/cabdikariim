@@ -1,0 +1,309 @@
+/* body{
+    margin:0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+    background-color:salmon;
+}
+
+.container{
+    position: relative;
+    background-color:darkgrey;
+    width: 350px;
+    height: 350px;
+    border-radius:50%;
+    border: 5px solid lightgray;
+    box-shadow: 1px 1px 4px rgba(0,0,0,.7);
+}
+
+img{
+    width: 70px;
+    position: absolute;
+    left: 50%;
+    top: 60px;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.numbers div{
+    position: absolute;
+    font-size: 30px;
+    font-weight:bold;
+    color: lightgoldenrodyellow; 
+    text-shadow: 1px 1px 4px rgba(0,0,0,.7);
+}
+
+
+.twelve{
+    top:6px;
+    left:50%;
+        transform: translateX(-50%);
+
+}
+.nine{
+    top:50%;
+    left:6px;
+    transform: translateY(-50%);
+}
+.three{
+    top:50%;
+    right:5px;
+    transform: translateY(-50%);
+
+}
+.six{
+    bottom:6px;
+    left:50%;
+    transform: translateX(-50%);
+}
+
+.arrows{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+}
+
+.arrows::before{
+    content:"";
+    width: 25px;
+    height: 25px;
+    background-color: darkgreen;
+    border-radius: 50%;
+    box-shadow: 1px 1px 2px rgba(0,0,0,.7);
+    z-index: 4;
+}
+
+.arrows div{
+    background-color: #fff;
+    width:7px;
+    position: absolute;
+    height: 120px;
+    transform-origin: bottom center;
+    bottom: 50%;
+    z-index: 3;
+    border-radius: 50% 50% 0 0;
+    box-shadow: 1px 1px 2px rgba(0,0,0,.3);
+
+}
+.arrows .hour{
+    height: 80px;
+    transform: rotate(30deg);
+}
+.arrows .second{
+    background-color: goldenrod;
+    transform: rotate(250deg);
+} */
+
+
+
+/*CHAT GBT*/
+/* LUXURY SHIMMER BACKGROUND */
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(45deg, #1a1a40, #2a2a72, #1f4068, #1b2e4b);
+  background-size: 400% 400%;
+  animation: backgroundShift 25s ease infinite;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+@keyframes backgroundShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at center, #2e2e88 0%, #000 80%);
+  animation: rotateBackground 20s linear infinite;
+  z-index: -2;
+  opacity: 0.7;
+  filter: blur(120px);
+}
+img{
+    width: 70px;
+    position: absolute;
+    left: 50%;
+    top: 0px;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+@keyframes rotateBackground {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* CLOCK FRAME */
+.clock {
+  width: 430px;
+  height: 430px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 40px rgba(0, 255, 255, 0.2);
+  position: relative;
+}
+
+/* CENTER DOT */
+.center {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  background: #00ffaa;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 15px #00ffaa;
+  z-index: 10;
+}
+
+/* CLOCK HANDS */
+.hand {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform-origin: bottom center;
+  transform: translateX(-50%) rotate(0deg);
+  transition: transform 0.5s ease-in-out;
+}
+
+.hour {
+  height: 80px;
+  width: 6px;
+  background: #ffffffaa;
+  box-shadow: 0 0 10px #ffffff88;
+}
+
+.minute {
+  height: 110px;
+  width: 4px;
+  background: #00ffee;
+  box-shadow: 0 0 12px #00ffee;
+}
+
+.second {
+  height: 130px;
+  width: 2px;
+  background: #ff0066;
+  box-shadow: 0 0 20px #ff0066;
+}
+
+/* ROLEX LOGO */
+.logo {
+  position: absolute;
+  top: 35px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  font-weight: bold;
+  color: #036e3b;
+  font-family: 'Georgia', serif;
+  text-shadow: 0 0 2px #fff, 0 0 10px gold;
+}
+
+/* Floating Glow Particles */
+.particle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: radial-gradient(circle, #00ffeeaa 10%, transparent 60%);
+  border-radius: 50%;
+  animation: floatParticle 10s infinite ease-in-out alternate;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.particle:nth-child(1) {
+  top: 20%;
+  left: 30%;
+  animation-delay: 0s;
+}
+.particle:nth-child(2) {
+  top: 70%;
+  left: 80%;
+  animation-delay: 3s;
+}
+.particle:nth-child(3) {
+  top: 40%;
+  left: 60%;
+  animation-delay: 5s;
+}
+
+@keyframes floatParticle {
+  0%   { transform: translateY(0) scale(1); opacity: 0.6; }
+  100% { transform: translateY(-100px) scale(1.3); opacity: 0.1; }
+}
+
+/* CLOCK NUMBERS CONTAINER */
+.numbers {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+/* CLOCK NUMBERS STYLE */
+.number {
+  position: absolute;
+  color: #fff2b3;
+  font-size: 1.4rem;
+  font-family: 'Georgia', serif;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px #000;
+}
+
+/* Positioning each number using rotate and translate (with wider radius) */
+.number12 { transform: rotate(0deg)    translate(140px) rotate(0deg); }
+.number1  { transform: rotate(30deg)   translate(140px) rotate(-30deg); }
+.number2  { transform: rotate(60deg)   translate(140px) rotate(-60deg); }
+.number3  { transform: rotate(90deg)   translate(140px) rotate(-90deg); }
+.number4  { transform: rotate(120deg)  translate(140px) rotate(-120deg); }
+.number5  { transform: rotate(150deg)  translate(140px) rotate(-150deg); }
+.number6  { transform: rotate(180deg)  translate(140px) rotate(-180deg); }
+.number7  { transform: rotate(210deg)  translate(140px) rotate(-210deg); }
+.number8  { transform: rotate(240deg)  translate(140px) rotate(-240deg); }
+.number9  { transform: rotate(270deg)  translate(140px) rotate(-270deg); }
+.number10 { transform: rotate(300deg)  translate(140px) rotate(-300deg); }
+.number11 { transform: rotate(330deg)  translate(140px) rotate(-330deg); }
+.numbers {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+}
+
+.number {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform:
+    rotate(calc(30deg * var(--i)))
+    translateY(-140px)
+    rotate(calc(-30deg * var(--i)));
+  color: #fff2b3;
+  font-size: 1.4rem;
+  font-family: 'Georgia', serif;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px #000;
+}
