@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+    <title>Survey Form</title>
+    <link href="./output.css" rel="stylesheet" />
+  </head>
+  <body class="flex justify-center font-[600]">
+
+    <div class="container px-5 border-4 border-green-400 w-[600px]">
+      <div class="Name my-3">
+        <p class="mb-2">Name</p>
+        <input  class=" border-2 border-gray-400 w-[400px]"  type="text" placeholder="Enter your name" />
+      </div>
+
+      <div class="Email my-3">
+        <p class="mb-2">Email</p>
+        <input  class=" border-2 border-gray-400 w-[400px] " type="email" placeholder="Enter Your Email" />
+      </div>
+
+      <div class="Age my-3">
+        <p class="mb-2">Age</p>
+        <input class=" border-2 border-gray-400 w-[400px]" type="text" placeholder="Enter your age" />
+      </div>
+
+
+      <label for="fruit">Choose option best describes you?</label>
+      <select  class="block border-2 border-gray-400 w-[360px] mt-1 mb-5" name="fruit" id="fruit">
+        <option value="apple">student</option>
+        <option value="banana">teacher</option>
+        <option value="orange">visitor</option>
+      </select>
+
+      <p class="mb-2">Would you recommend GeeksfkorGeeks to a friend?</p>
+      <input type="radio" name="yes" value="yes" id="yes" />
+      <label for="yes">yes</label><br />
+
+      <input type="radio" name="no" value="no" id="no" />
+      <label for="no">no</label><br />
+
+      <input class="" type="radio" name="maybe" value="maybe" id="maybe" />
+      <label for="maybe">maybe</label>
+      </select>
+
+      <p class="mt-3 mb-1">Languages and frameworks known <span class="text-[13px] text-gray-700">(check all that apply)</span> </p>
+      <input type="checkbox" name="c" value="c" id="yes" />
+      <label for="c">C</label><br />
+
+      <input type="checkbox" name="c++" value="c++" id="c++" />
+      <label for="c++">C++</label><br />
+      <input type="checkbox" name="c#" value="c#" id="c#" />
+      <label for="c#">C#</label><br />
+      <input type="checkbox" name="Java" value="Java" id="Java" />
+      <label for="Java">Java</label><br />
+      <input type="checkbox" name="Python" value="Python" id="Python" />
+      <label for="Python">Python</label><br />
+      <input type="checkbox" name="Javascript" value="Javascript" id="Javascript" />
+      <label for="Javascript">Javascript</label><br />
+      <input type="checkbox" name="React" value="React" id="React" />
+      <label for="React">React</label><br />
+      <input type="checkbox" name="Angular" value="Angular" id="Angular" />
+      <label for="Angular">Angular</label><br />
+      <input type="checkbox" name="Django" value="Django" id="Django" />
+      <label for="Django">Django</label><br />
+      <input type="checkbox" name="Spring" value="Spring" id="Spring" />
+      <label for="no">Spring</label><br />
+
+      <div>
+        <p class="mt-4 mb-2">Any comments or suggestions</p>
+        <input class="block w-full border-2 border-gray-400 h-[55px] text-left" type="text" placeholder="Enter your comments here">
+        <button class="flex justify-center w-full mx-auto bg-green-500 shadow-2xl rounded-sm mt-7 mb-9 text-[25px] border-2">Submit</button>
+      </div>
+      
+    </div>
+
+
+
+  </body>
+</html>
+
+
+
+
