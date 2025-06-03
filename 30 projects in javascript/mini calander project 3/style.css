@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+    display:flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    background: linear-gradient(to top,  rgb(209, 206, 13), rgb(29, 153, 29));
+    font-family: cursive;
+}
+
+.container {
+    background: linear-gradient(to top,  rgb(68, 0, 255), rgb(0, 255, 0));
+    width: 300px;
+    text-align: center;
+    border-radius: 10px;
+    overflow: hidden;
+    }
+
+    .month-name {
+        margin: 0;
+       ontainer {
+    background: linear-gradient(to top,  rgb(68, 0, 255), rgb(0, 255, 0));
+        padding: 10px;
+        color: #000;       
+        font-size: 30px;
+        font-weight: bold;
+    }}
+
+    .day-name {
+        color: #000;
+        font-weight: bold;
+        font-size: 15px;
+
+    }
+    .day-num {
+        margin: 0;
+        font-size: 88px;
+        font-weight: bold;
+
+    }
+
+    
+    .year {
+        margin: 20px 0;
+        color: #000;
+        font-weight: bold;
+        font-size: 15px;
+         font-weight: 500;
+        }

@@ -1,0 +1,84 @@
+body{
+    margin: 0;
+    display: flex; 
+    justify-content:center;
+    height:100vh;
+    align-items: center;
+    /* background: linear-gradient(980deg, pink, blue); */
+      background: linear-gradient(45deg, #ff6ec4, #7873f5);
+  background-size: 400% 400%;
+  animation: glowBackground 10s ease infinite;
+}
+@keyframes glowBackground {
+  0% {
+    background-position: 0% 50%;
+    filter: brightness(1);
+  }
+  50% {
+    background-position: 100% 50%;
+     /* background: linear-gradient(980deg, pink, rgb(35, 35, 114));  */
+    filter: brightness(1.2); /* glow effect */
+  }
+  100% {
+    background-position: 0% 50%;
+    filter: brightness(1);
+  }
+}
+
+.search-bar-container{
+    display: flex; 
+    align-items: center;
+    background-color: white;
+    padding: 5px;
+    width: 300px;
+    height: 50px;
+    border: none;
+    border-radius: 50px;
+    /* box-shadow:  10px 10px 10px rgba(9, 219, 44,17); */
+box-shadow: 0 0 20px rgb(0, 255, 0,9);
+    margin:10px;
+    position: relative;
+    transition: width 1.5s;
+}
+.magnifier{
+    width: 25px;
+    position: absolute;
+    left: 15px;
+    cursor: pointer;
+   
+}
+
+.mic-icon{
+    width: 30px;
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+     transition: width .4s;
+    transition-delay: 1s;
+
+}
+
+.input{
+    border: none;
+    margin: 10px 50px;
+    outline:none;
+    font-size: 19px;
+    width: 100%;
+    background: linear-gradient(to right, #ff6ec4, #7873f5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: width 1s;
+    transition-delay: 0.5s;
+
+}
+
+.active.search-bar-container{
+    width: 50px;
+}
+
+.active .mic-icon{
+width: 0;
+}
+.active .input{
+width: 0;
+}
