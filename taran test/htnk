@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taranbusiness</title>
+<style>
+    body{
+    height: 1000px;;
+    background-color: rgb(10,76,123);  
+    margin:0;
+}
+.logo img{
+    width:7rem;
+    margin-left: 5rem;
+
+}
+.nav{
+    display: flex;
+    max-width: 1350px; 
+    justify-content: space-between;
+    background-color: rgb(10,76,123);  
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top:0;
+    padding-top: 10px;
+}
+
+.nav-links{
+    display:flex;
+    gap: 20px; 
+    color:aliceblue;
+    margin-right: 13rem;
+    font-size: 1rem;
+    font-family:sans-serif;
+    font-weight: bolder;
+    cursor: pointer;
+}
+.hamburger{
+    width: 30px;
+    border: 1px solid gainsboro;
+    padding: 1px 10px;
+    border-radius: 6px;
+}
+
+/* When screen width is 1025px and up (show nav links, hide hamburger) */
+@media screen and (min-width: 900px) {
+    .hamburger {
+        display: none; /* better than visibility for layout */
+    }
+    .nav-links {
+        display: flex;
+    }
+}
+
+/* When screen width is 1024px and below (show hamburger, hide nav links) */
+@media screen and (max-width: 899px) {
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+    .nav-links {
+        display: none;
+    }
+}
+
+</style>
+</head>
+<body>
+    <div class="section-one">
+     <div class="nav">
+  <div class="logo">
+    <img src="Logo_Variation-03__2_-removebg-preview-e1722510845776.png" alt="">
+  </div>
+
+  <div class="nav-links">
+    <div class="home">Home</div>
+    <div class="about">About</div>
+    <div class="features">Features</div>
+    <div class="services">Services</div>
+    <div class="contact-us">Contact Us</div>
+  </div>
+
+  <!-- Moved outside nav-links -->
+  <div class="hamburger">
+    <img onclick="toggleHam" src="strip.png" alt="menu" width="30">
+  </div>
+</div>
+
+    </div>
+
+    <script>
+
+        function toggleHam () {
+
+        }
+    </script>
+</body>
+</html>

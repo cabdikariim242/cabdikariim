@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taranbusiness</title>
+    <style>
+        body {
+            height: 1000px;
+            ;
+            background-color: rgb(10, 76, 123);
+            margin: 0;
+        }
+
+        .logo img {
+            width: 7rem;
+            margin-left: 3rem;
+
+        }
+
+        .nav {
+            display: flex;
+            max-width: 1350px;
+            justify-content: space-between;
+            background-color: rgb(10, 76, 123);
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            padding-top: 10px;
+        }
+
+        .nav-link-out-side {
+            display: flex;
+            gap: 20px;
+            color: aliceblue;
+            font-size: 1rem;
+            font-family: sans-serif;
+            font-weight: bolder;
+            cursor: pointer;
+        }
+
+        .nav-link-in-side {
+            display: flex;
+            gap: 20px;
+            color: aliceblue;
+            margin-right: 13rem;
+            font-size: 1rem;
+            font-family: sans-serif;
+            font-weight: bolder;
+            cursor: pointer;
+        }
+
+        .hamburger {
+            width: 30px;
+            height: 30px;
+            border: 1px solid gainsboro;
+           
+            border-radius: 6px;
+            z-index: 10001;
+        }
+
+        @media screen and (min-width: 900px) {
+            .hamburger {
+                display: none;
+                /* better than visibility for layout */
+            }
+            .nav-link-in-side{
+            display:none;
+           }
+
+         
+        }
+
+        .imgs .close-icon {
+            display: none;
+        }
+        .imgs .close-icon:hover {
+            background-color: rgba(14, 104, 14, 0.767);
+            transition: background-color .1s;
+        }
+          
+
+        .white-logo {
+            display: none;
+        }
+
+        @media screen and (max-width: 899px) {
+            .hamburger {
+                display: block;
+                cursor: pointer;
+            }
+          .nav-link-in-side{
+                display: flex;
+            }
+
+            .nav-link-out-side {
+                display: none;
+            }
+        }
+
+      .nav-link-in-side  {
+            display: flex;
+            flex-direction: column;
+            left: -350px;
+            width: 300px;
+            position: fixed;
+            background-color: white;
+            color: #000;
+            top: 0;
+            bottom: 0;
+            padding-left: 20px;
+           transition: left 0.7s ease-in-out;
+           z-index: 10001;
+        }
+         .nav-added .nav-link-in-side {
+            left: 0px;
+        
+        }
+       .nav-added .shadow {
+            display: flex;
+            flex-direction: column;
+            left: 0;
+            right: 0;
+            position: fixed;
+            background-color: rgba(0,0,0,.4);
+            color: #000;
+            top: 0;
+            bottom: 0;
+            padding-left: 20px;
+           transition: background-color 1s ease-in-out;
+        }
+        
+
+        .nav-added .nav-link-in-side .white-logo{
+            display: flex;
+        }
+        .nav-added .nav-link-in-side .imgs .close-icon {
+            display: flex;
+        }
+        .imgs  .white-logo{
+            max-width: 7rem;
+            min-height: 2rem;
+        }
+
+        .imgs .close-icon {
+            max-width: 10px;
+            min-height: 10px;
+            padding:15px;
+            margin-right: 10px;
+            border: 1px solid rgb(63, 57, 57);
+            border-radius:10px;
+        }
+        .imgs{
+            display:flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+
+     
+
+
+    </style>
+</head>
+
+<body>
+    <div class="section-one">
+        <div class="nav ">
+            <div class="logo">
+                <img src="Logo_Variation-03__2_-removebg-preview-e1722510845776.png" alt="">
+
+            </div>
+
+            <div class="nav-link-in-side ">
+                <div class="imgs">
+                    <img class="white-logo" src="Logo-Variation-white.png" alt="">
+                    <img class="close-icon" src="close (1).png" alt="">
+                </div>
+
+                <div class="home">Home</div>
+                <div class="about">About</div>
+                <div class="features">Features</div>
+                <div class="services">Services</div>
+                <div class="contact-us">Contact Us</div>
+            </div>
+            <!-- testing -->
+            <div class="nav-link-out-side ">
+             
+
+                <div class="home">Home</div>
+                <div class="about">About</div>
+                <div class="features">Features</div>
+                <div class="services">Services</div>
+                <div class="contact-us">Contact Us</div>
+            </div>
+            <div class="shadow"></div>
+
+            <!-- Moved outside nav-links -->
+            <div class="hamburger">
+                <img onclick="toggleHam()" src="strip.png" alt="menu" width="30">
+            </div>
+        </div>
+
+    </div>
+    <div class="overlay-shadow" onclick="closeSidebar()"></div>
+<script>
+    function toggleHam() {
+        const navEl = document.querySelector(".nav");
+        navEl.classList.toggle('nav-added');
+    }
+
+    function closeSidebar() {
+        document.querySelector(".nav").classList.remove("nav-added");
+    }
+
+    // Optional: Close sidebar using the close icon
+    document.addEventListener("DOMContentLoaded", function () {
+        const closeIcon = document.querySelector(".close-icon");
+        if (closeIcon) {
+            closeIcon.addEventListener("click", closeSidebar);
+        }
+    });
+</script>
+
+</body>
+
+</html>
